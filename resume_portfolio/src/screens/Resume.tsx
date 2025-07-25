@@ -47,7 +47,7 @@ export default function Resume() {
       {/* Download Resume Button */}
       <section className="resume-section">
         <a
-          href="/files/Zenker-Resume.pdf"
+          href="/Zenker-resume.pdf"
           download
           className="download-button"
           target="_blank"
