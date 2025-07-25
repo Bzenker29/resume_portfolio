@@ -1,3 +1,6 @@
+
+html,
+body,
 #root {
   margin: 0;
   padding: 0;
@@ -5,33 +8,248 @@
   background-color: darkslategrey;
 }
 
-.header {
-  text-align: left;
-  margin: 20px;
-  padding: 20px;
+.home-page {
+  margin-top: 40px;
+  color: white;
 }
 
-.text {
-  color: darksalmon;
-  padding: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.img-style {
+  width: 100%;
+  max-width: 300px;
+  border: 4px solid white;
+  border-radius: 8px;
 }
 
+.contact-list {
+  margin-top: 20px;
+  max-width: 400px;
+  font-size: 1rem;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: white;
+}
+
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navbar layout */
 .navbar-container {
   display: flex;
-  justify-content: center; 
-  align-items: flex-start;
-  gap: 10px;
-  padding: 1rem;         /* add spacing from top */
-  text-align: left;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f2937; /* dark gray */
+  padding: 1rem 2rem;
+  gap: 2rem;
+  border-bottom: 1px solid #444;
 }
 
-.navbar {
-  margin: 0; 
+/* Nav link styling */
+.nav-link {
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.navbar-text {
-    color: ghostwhite;
-    text-decoration: none;
+/* Hover effect */
+.nav-link:hover {
+  color: #00ffcc;
+}
+
+/* Active link style */
+.nav-link.active {
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* Optional: animated underline for active or hover */
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00ffcc;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.experience-container {
+  padding: 2rem;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00ffcc;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-item {
+  background-color: #2f3640;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #00ffcc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.experience-role {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.experience-company {
+  font-style: italic;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.experience-details {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+.experience-dates {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.projects-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffcc;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  background-color: #2f3640;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #00ffcc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  color: #00ffcc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.resume-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffcc;
+}
+
+.resume-section {
+  margin-bottom: 2rem;
+  background-color: #2f3640;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #00ffcc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.resume-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.resume-item p,
+.skills-list,
+.experience-list {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 0.3rem;
+}
+
+.skills-list,
+.experience-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.download-button {
+  display: inline-block;
+  background-color: #00ffcc;
+  color: #1f2937;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.download-button:hover {
+  background-color: #00cca3;
 }
 
